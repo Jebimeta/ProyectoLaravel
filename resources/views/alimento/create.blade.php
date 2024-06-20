@@ -2,8 +2,8 @@
 <div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Añadir Alimento</h5>
+            <div class="modal-header text-center">
+                <h5 class="modal-title text-center font-weight-bold" id="exampleModalLabel">Añadir Alimento</h5>
                 <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

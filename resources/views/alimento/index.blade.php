@@ -10,6 +10,12 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create">
             Añadir
         </button>
+        <form id="logout-form" action="/logout" method="POST" style="display: none;">
+            @csrf
+        </form>
+        <button class="btn btn-success" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</button>
+
+
         <div class="table-responsive">
             <br>
             <table class="table">
