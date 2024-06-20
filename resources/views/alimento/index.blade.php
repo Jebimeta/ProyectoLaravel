@@ -16,7 +16,7 @@
         <button class="btn btn-success" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</button>
 
 
-        <div class="table-responsive">
+        <div class="table-responsive text-center">
             <br>
             <table class="table">
                 <thead class="bg-dark text-white text-center">
@@ -48,10 +48,13 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $alimentos->links()}}
         </div>
         @include('alimento.create')
     </div>
     <div class="col-md-2"></div>
+
+    
 </div>
 
 @endsection

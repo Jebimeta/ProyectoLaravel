@@ -8,25 +8,27 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{{route('home.store')}}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('home.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body">
+
+
+
                     <div class="mb-3">
                         <label for="" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" id="" aria-describedby="helpId" placeholder="" />
+                        <input type="text" class="form-control" name="nombre" id="" aria-describedby="helpId" placeholder="" value="{{ old('nombre') }}" />
                         <small id="helpId" class="form-text text-muted">Introduce el nombre del alimento*</small>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Precio</label>
-                        <input type="text" class="form-control" name="precio" id="" aria-describedby="helpId" placeholder="" />
+                        <input type="text" class="form-control" name="precio" id="" aria-describedby="helpId" placeholder="" value="{{ old('precio') }}" />
                         <small id="helpId" class="form-text text-muted">Introduce el precio*</small>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Cantidad</label>
-                        <input type="number" class="form-control" name="cantidad" id="" aria-describedby="helpId" placeholder="" />
+                        <input type="number" class="form-control" name="cantidad" id="" aria-describedby="helpId" placeholder="" value="{{ old('cantidad') }}" />
                         <small id="helpId" class="form-text text-muted">Introduce la cantidad*</small>
                     </div>
-
 
                 </div>
                 <div class="modal-footer">
@@ -37,3 +39,14 @@
         </div>
     </div>
 </div>
+
+<!-- Mostrar errores de validación -->
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif

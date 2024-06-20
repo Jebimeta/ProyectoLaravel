@@ -1,0 +1,9 @@
+/* Estilos para el contenedor de paginación */
+.pagination-container {
+    margin-top: 100px; /* Ejemplo de margen superior */
+    text-align: center; /* Centrar los enlaces de paginación */
+}
+
+.pagination-container .page-item .page-link {
+    font-size: 20px; /* Tamaño de fuente deseado para los enlaces */
+}
